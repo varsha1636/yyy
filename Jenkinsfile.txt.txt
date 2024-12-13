@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build & Test') {
+            steps {
+                echo 'Building and testing application using Jenkins tools...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying application using Jenkins...'
+            }
+        }
+    }
+    post {
+        success {
+            echo 'Pipeline succeeded with Jenkins tools!'
+        }
+    }
+}
